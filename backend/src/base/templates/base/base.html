@@ -1,0 +1,176 @@
+{% load static %}
+<!-- important! load static file path-->
+<!-- THIS IS THE WEBSITES BASE TEMPLATE --- app extend this template -->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  {% if title %}
+  <title> {{title}} </title>
+  {% else %}
+  <title> Jonas Leonhard</title>
+  {% endif %}
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- main.css Styling -->
+  <link rel="stylesheet" type="text/css" href="{% static 'base/main.css' %}">
+</head>
+
+<body>
+  <header class="site-header">
+
+    <nav class="main-menu">
+      <!-- SHOW USER APP -->
+      <div class="user_tool">
+        {% if user.is_authenticated %}
+        <!--AUTHENICATED:-->
+        <div class="user_tool_profileimg-a">
+          <img class="user_tool_profileimg" src="{{ user.profile.image.url }}">
+          <div class="user_tool_usermenu usermenu_hidden">
+            <ul>
+              <li>
+                <a href="{%url 'profile'%}">Profile - {{user.username}} </a>
+              </li>
+              <li>
+                <a href="{%url 'profile'%}">Settings</a>
+              </li>
+              <li>
+                <a href="{%url 'logout'%}">Logout</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="user_tool_info">
+          <a href="{%url 'logout'%}">
+            <img class="user_tool_icon float_right" src="{% static 'base/logout.svg' %}">
+          </a>
+        </div>
+        {% else %}
+        <!--NOT AUTHENICATED:-->
+        <div class="user_tool_profileimg-a">
+          <img class="user_tool_profileimg" src="{% static 'base/cogwheel.svg' %}">
+          <div class="user_tool_usermenu usermenu_hidden">
+            <ul>
+              <li>
+                <a href="{%url 'profile'%}">Login </a>
+              </li>
+              <li>
+                <a href="{%url 'profile'%}">Register</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="user_tool_info">
+          <a href="{%url 'register'%}">
+            <img class="user_tool_icon float_right" src="{% static 'base/logout.svg' %}">
+          </a>
+          <a href="{% url 'login'%}">
+            <img class="user_tool_icon float_right" src="{% static 'base/logout.svg' %}">
+          </a>
+
+        </div>
+        {% endif %}
+      </div><!-- end user app-->
+
+      <li class="has_subnav">
+        <!-- Width subnav -->
+        <div class="subnav-a">
+          <img class="icon icon_folder" src="{% static 'base/folder.svg' %}">
+          <span class="nav-text">
+            Projekte:
+          </span>
+          <div class="subnav_icon">
+            <div class="plus_icon icon_visible"></div>
+            <!--IMPLEMENT IN JS-->
+            <div class="minus_icon icon_hidden"></div>
+            <!--IMPLEMENT IN JS-->
+          </div>
+        </div>
+        <!-- Subnav main_menu.js toggle 'hidden' <-> 'visible' -->
+        <div class="subnav hidden">
+          <a href="{% url 'blogs-home' %}">
+            <span class="sub-item">
+              Blog
+            </span>
+          </a>
+        </div>
+
+        <div class="subnav hidden">
+          <a href="{% url 'blogs-about' %}">
+            <span class="sub-item">
+              Blog About
+            </span>
+          </a>
+        </div>
+      </li>
+      <!--end has_subnav-->
+
+      <li>
+        <!--No Subnav-->
+        <a href="{% url 'index'%}">
+          <img class="icon" src="{% static 'base/about_me.svg' %}">
+          <span class="nav-text">
+            Über Mich
+          </span>
+        </a>
+      </li>
+      <!--end has_subnav-->
+    </nav>
+  </header>
+
+  <!-- #MAIN-CONTENT -->
+  <main role="main" class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <!--FLASH MESSAGES:-->
+        {% if messages %}
+        {% for message in messages %}
+        <div class="alert alert-{{ message.tags }}">
+          {{ message }}
+        </div>
+        {% endfor %}
+        {% endif %}
+
+        <!-- Base.html - Content:-->
+        {% block content %}{% endblock %}
+
+      </div>
+      <div class="col-md-4">
+        <div class="content-section">
+          <h3>Our Sidebar</h3>
+          <p class='text-muted'>You can put any information here you'd like.
+            <ul class="list-group">
+              <li class="list-group-item list-group-item-light">Latest Posts</li>
+              <li class="list-group-item list-group-item-light">Announcements</li>
+              <li class="list-group-item list-group-item-light">Calendars</li>
+              <li class="list-group-item list-group-item-light">etc</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+
+  <!--implemented default Scripts: using jQuery...-->
+  <script src="{% static 'base/main_menu.js' %}"></script>
+</body>
+
+</html>
