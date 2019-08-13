@@ -1,4 +1,4 @@
-# Website
+# Website (Currently Work in Progress)
 -> to activate virtualenv:      source env/bin/activate
 -> to start django server:      cd backend (activate virtualenv)
 								cd src
