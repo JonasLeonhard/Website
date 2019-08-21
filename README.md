@@ -7,18 +7,18 @@
 Used:
 Virtualenv,
 Pip,
-Django Framework:
-Django's Templating,
-Django's Classbased Database,
+Django framework:
+Django's templating,
+Django's classbased database,
 Django API, URLs, APPs,
 
 Paginator,
 Signals,
-Environment Variables,
+environment variables,
 
 Bootstrap,
-JS - DOM Manipulation,
-CSS Transitions
+JS - DOM manipulation,
+CSS transitions
 
 
 ![Mask](../master/github-readme/Screen00.png)
