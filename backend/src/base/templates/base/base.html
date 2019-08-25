@@ -125,9 +125,8 @@
   </header>
 
   <!-- #MAIN-CONTENT -->
-  <main role="main" class="container">
-    <div class="row">
-      <div class="col-md-8">
+  <main>
+    
         <!--FLASH MESSAGES:-->
         {% if messages %}
         {% for message in messages %}
@@ -140,7 +139,8 @@
         <!-- Base.html - Content:-->
         {% block content %}{% endblock %}
 
-      </div>
+      
+      <!--
       <div class="col-md-4">
         <div class="content-section">
           <h3>Our Sidebar</h3>
@@ -154,7 +154,8 @@
           </p>
         </div>
       </div>
-    </div>
+      -->
+    
   </main>
 
 
@@ -169,8 +170,14 @@
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
   </script>
 
+  <!-- for animation::-->
+  
+
   <!--implemented default Scripts: using jQuery...-->
   <script src="{% static 'base/main_menu.js' %}"></script>
+
+  <!-- Base.html - Content:-->
+  {% block script %}{% endblock %}
 </body>
 
 </html>

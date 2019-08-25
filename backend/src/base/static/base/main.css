@@ -1,7 +1,6 @@
 body {
   background: #fafafa;
   color: #333333;
-  margin-top: 3rem;
 }
 
 h1,
@@ -18,9 +17,6 @@ ul {
 }
 
 /*----------- NAVBAR: --------------------------------------------*/
-
-
-
 
 
 .main-menu:hover,
@@ -461,4 +457,133 @@ img.user_tool_profileimg:hover{
   width: 125px;
   margin-right: 20px;
   margin-bottom: 16px;
+}
+
+/*<-- index.html -->*/
+.splash-wrapper{
+  background: #621163;
+
+}
+
+.me_svg{
+  position: relative;
+  margin-left:auto; 
+  margin-right:auto; 
+  display:block;  
+
+  transition: opacity .2s, transform 0.5s;
+
+  width: 300px;
+  height: 300px;
+
+  z-index: 1;
+}
+.me_hidden{
+  position: relative;
+  margin-left:auto; 
+  margin-right:auto; 
+  display:block;  
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+
+  margin-top: -300px;
+  opacity: 0;
+  transition: opacity .2s, transform 0.5s;
+  z-index: 2;
+}
+.me:hover > .me_hidden{
+  opacity: 1;
+  transform: rotateY(180deg);
+}
+.me:hover > .me_svg{
+  cursor: pointer;
+  transform: rotateY(180deg);
+  opacity: 0;
+}
+.splash-top{
+  padding-top: 4em;
+  padding-bottom: 4em;
+}
+.splash-top h1{
+  color: #e6bbfe;
+  text-align: center;
+}
+.splash-top h2{
+  color: #e2acff;
+  text-align: center;
+  padding-left: 3em;
+  padding-right: 3em;
+  font-weight: 100;
+}
+.splash {
+  width: 100%;
+}
+.splash-after{
+  background: #2d0742;
+  text-align: center;
+  color: white;
+
+  /*
+  gets rid of 1px pink line at the intersection of splash-wrapper 
+  behind the svg and this background color
+  */
+  transform: translateY(-2px); 
+
+  padding-top: 3em;
+  padding-bottom: 3em;
+  padding-left: 3em;
+  padding-right: 3em;
+}
+
+.splash-after p{
+  color: white;
+
+}
+
+.bigger_txt{
+  font-weight: bold;
+  display: inline-block;
+  color: rgb(166, 11, 255);
+}
+
+.divider{
+  height: 50vh;
+  background: #621163;
+  transform: translateY(-2px);
+}
+/*stecker part::*/
+.stecker{
+  width: 100%;
+  background: #621163;
+}
+
+.stecker p{
+  margin: 0;
+}
+
+.stecker svg {
+  transform: translateY(-3px);
+}
+
+.placeholder{
+  height: 400px;
+  width: 100%;
+}
+
+/*JS SCRIPTS:: url_controller.js changes:*/
+.querystring_firma{
+  display: inline-block;
+}
+
+.querystring_firma::first-letter{
+  text-transform: uppercase;
+}
+
+.querystring_firma_warumich{
+  color: white;
+  text-align: center;
+  padding: 3em;
+  background: #2d0742;
+  transform: translateY(-3px);
 }
