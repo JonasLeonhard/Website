@@ -38,7 +38,8 @@ nav.main-menu.expanded {
   right: 0;
 
   height: 100%;
-  width: 40px; /*DEBUG: EXPAND=ca.400px UNEXPAND=40px*/
+  width: 40px;
+  /*DEBUG: EXPAND=ca.400px UNEXPAND=40px*/
 
   transition: width 0.1s linear;
 
@@ -84,7 +85,8 @@ nav.main-menu.expanded {
 
   font-family: 'Arial', sans-serif;
 
-  white-space:nowrap; /*prevent line-break when closed*/
+  white-space: nowrap;
+  /*prevent line-break when closed*/
 }
 
 .main-menu>ul.logout {
@@ -122,7 +124,7 @@ a:focus {
 
 }
 
-.icon_folder{
+.icon_folder {
   transform: translateY(-6px);
 }
 
@@ -143,7 +145,7 @@ nav.main-menu li.active>a,
 .dropdown-menu>.active>a:hover,
 .dropdown-menu>.active>a:focus,
 .no-touch .dashboard-page nav.dashboard-menu ul li:hover a,
-.dashboard-page nav.dashboard-menu ul li.active a{
+.dashboard-page nav.dashboard-menu ul li.active a {
   color: #fff;
   background-color: #5fa2db;
 }
@@ -171,36 +173,41 @@ nav.main-menu li.active>a,
   transition: height 0.3s ease-in-out, opacity 0.3s 0.15s ease-in;
   font-size: 0.8em;
 }
-.main-menu li:hover > .visible{
+
+.main-menu li:hover>.visible {
   width: 100%;
   /**debug!!! border: 3px solid red;*/
 }
-.main-menu li:hover > .visible{
+
+.main-menu li:hover>.visible {
   margin-top: 0.1em;
 }
+
 .hidden {
   height: 0px;
   opacity: 0;
 }
 
 .visible {
-  width: 400px; /*<-text no on the left when menu is closed*/
+  width: 400px;
+  /*<-text no on the left when menu is closed*/
   height: 2em;
   opacity: 1;
   transition: all .3s linear;
 }
 
 
-.main-menu li:hover{
+.main-menu li:hover {
   border-left: 1px solid #5fa2db;
 }
 
 
 
-.subnav:hover{
+.subnav:hover {
   background-color: #5fa2db;
 }
-.sub-item{
+
+.sub-item {
   color: rgb(194, 194, 194);
   margin-left: 40px;
 }
@@ -212,17 +219,18 @@ nav.main-menu li.active>a,
   border-left: 5px solid transparent;
 }
 
-.main-menu li:hover > .subnav-a{
+.main-menu li:hover>.subnav-a {
   color: white;
   background-color: #5fa2db;
 }
+
 /*PLUS/MINUS_ICON:*/
-.subnav_icon{
+.subnav_icon {
   display: table-column;
   position: relative;
-  float: right; 
+  float: right;
   right: 35%;
-  
+
   vertical-align: middle;
   width: 45px;
   height: 45px;
@@ -230,7 +238,7 @@ nav.main-menu li.active>a,
   text-align: center;
   font-size: 20px;
 
-  
+
   border-radius: 5px;
   border: solid 2px transparent;
   margin: 0 5px 5px 0;
@@ -238,20 +246,23 @@ nav.main-menu li.active>a,
   transform: scale(1, 1);
 }
 
-.plus_icon{
+.plus_icon {
   margin-top: 41%;
   position: absolute;
   transition: all 0.5s ease-in-out;
   transition-delay: 0.1s;
   transform-origin: 7px;
 }
-.subnav-a:hover > .subnav_icon > .plus_icon::before{
+
+.subnav-a:hover>.subnav_icon>.plus_icon::before {
   background-color: white;
 }
-.subnav-a:hover > .subnav_icon > .plus_icon::after{
+
+.subnav-a:hover>.subnav_icon>.plus_icon::after {
   background-color: white;
 }
-.plus_icon::before{
+
+.plus_icon::before {
   width: 15px;
   height: 1px;
   background-color: #b1b1b1;
@@ -259,14 +270,18 @@ nav.main-menu li.active>a,
   position: absolute;
   display: block;
 }
-.subnav:hover{
-  background-color: rgb(131, 188, 223); /*<- subnav background color on:hover*/
-}
-.subnav:hover > a > .sub-item{
-  color: white; /*subnav text color on:hover*/
+
+.subnav:hover {
+  background-color: rgb(131, 188, 223);
+  /*<- subnav background color on:hover*/
 }
 
-.plus_icon::after{
+.subnav:hover>a>.sub-item {
+  color: white;
+  /*subnav text color on:hover*/
+}
+
+.plus_icon::after {
   transform: rotate(90deg);
   width: 15px;
   height: 1px;
@@ -276,7 +291,7 @@ nav.main-menu li.active>a,
   display: block;
 }
 
-.minus_icon{
+.minus_icon {
   position: absolute;
   margin-top: 41%;
   width: 15px;
@@ -287,13 +302,13 @@ nav.main-menu li.active>a,
   transform-origin: 50%;
 }
 
-.minus_icon::before{
+.minus_icon::before {
   content: '';
   position: absolute;
   display: block;
 }
 
-.minus_icon::after{
+.minus_icon::after {
   content: '';
   position: absolute;
   display: block;
@@ -307,24 +322,26 @@ nav.main-menu li.active>a,
 }
 
 .icon_visible {
-  width: 15px; /*<-text no on the left when menu is closed*/
+  width: 15px;
+  /*<-text no on the left when menu is closed*/
   height: 1px;
   opacity: 1;
   transform: rotate(180deg);
 }
-.subnav-a:hover > .subnav_icon > .minus_icon{
+
+.subnav-a:hover>.subnav_icon>.minus_icon {
   background-color: white;
 }
 
 /*USER TOOL AT BOTTOM:_____________________________________________*/
 
-.user_tool{
+.user_tool {
   position: relative;
   left: 0;
   top: 0;
   width: 100%;
   height: 50px;
-  background-color:#1f1a20;
+  background-color: #1f1a20;
   display: flex;
   padding-right: 40px;
   padding-top: 5px;
@@ -332,7 +349,7 @@ nav.main-menu li.active>a,
   padding-bottom: 5px;
 }
 
-img.user_tool_profileimg{
+img.user_tool_profileimg {
   position: relative;
   width: 25px;
   height: 25px;
@@ -345,42 +362,47 @@ img.user_tool_profileimg{
   transition-delay: 0.15s;
 }
 
-img.user_tool_profileimg:hover{
+img.user_tool_profileimg:hover {
   border: 1px solid rgb(28, 188, 206);
   cursor: pointer;
 }
-.main-menu:hover > .user_tool > .user_tool_profileimg-a > .user_tool_profileimg {
+
+.main-menu:hover>.user_tool>.user_tool_profileimg-a>.user_tool_profileimg {
   width: 40px;
   height: 40px;
   margin-top: 0px;
 }
-.user_tool a{
+
+.user_tool a {
   margin-right: 5px;
 }
-.user_tool_info{
+
+.user_tool_info {
   position: relative;
   flex: 1;
 }
-.user_tool a{
-  color:#b1b1b1;
-}
-.user_tool a:hover{
-  color:white;
+
+.user_tool a {
+  color: #b1b1b1;
 }
 
-.float_right{
+.user_tool a:hover {
+  color: white;
+}
+
+.float_right {
   position: relative;
   float: right;
 }
 
-.user_tool_icon{
+.user_tool_icon {
   position: relative;
 
   vertical-align: middle;
 
   width: 30px;
   height: 30px;
-   /*<-- scale!!*/
+  /*<-- scale!!*/
   text-align: center;
   font-size: 20px;
   background-color: rgb(254, 207, 89);
@@ -390,15 +412,15 @@ img.user_tool_profileimg:hover{
   transition: all 0.1s ease;
 }
 
-.user_tool_icon:hover{
+.user_tool_icon:hover {
   width: 35px;
   height: 35px;
-  
+
   border: 1px solid rgb(28, 188, 206);
 }
 
 /*user_tool_usermenu:!! toggled with main_menu.js*/
-.user_tool_usermenu{
+.user_tool_usermenu {
   position: relative;
   overflow: hidden;
   background: #212121;
@@ -409,18 +431,21 @@ img.user_tool_profileimg:hover{
   z-index: 1000;
   transition: all 0.1s linear;
 }
-.user_tool_usermenu.usermenu_visible ul > li > a{
+
+.user_tool_usermenu.usermenu_visible ul>li>a {
   color: rgb(194, 194, 194);
   padding: 10px;
 }
-.user_tool_usermenu.usermenu_visible > ul >li > a:hover{
+
+.user_tool_usermenu.usermenu_visible>ul>li>a:hover {
   color: white;
 }
 
-.usermenu_hidden{
+.usermenu_hidden {
   opacity: 0;
 }
-.usermenu_visible{
+
+.usermenu_visible {
   opacity: 1;
 }
 
@@ -460,16 +485,16 @@ img.user_tool_profileimg:hover{
 }
 
 /*<-- index.html -->*/
-.splash-wrapper{
+.splash-wrapper {
   background: #621163;
 
 }
 
-.me_svg{
+.me_svg {
   position: relative;
-  margin-left:auto; 
-  margin-right:auto; 
-  display:block;  
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 
   transition: opacity .2s, transform 0.5s;
 
@@ -478,11 +503,12 @@ img.user_tool_profileimg:hover{
 
   z-index: 1;
 }
-.me_hidden{
+
+.me_hidden {
   position: relative;
-  margin-left:auto; 
-  margin-right:auto; 
-  display:block;  
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
   border-radius: 50%;
   width: 300px;
   height: 300px;
@@ -492,34 +518,41 @@ img.user_tool_profileimg:hover{
   transition: opacity .2s, transform 0.5s;
   z-index: 2;
 }
-.me:hover > .me_hidden{
+
+.me:hover>.me_hidden {
   opacity: 1;
   transform: rotateY(180deg);
 }
-.me:hover > .me_svg{
+
+.me:hover>.me_svg {
   cursor: pointer;
   transform: rotateY(180deg);
   opacity: 0;
 }
-.splash-top{
+
+.splash-top {
   padding-top: 4em;
   padding-bottom: 4em;
 }
-.splash-top h1{
+
+.splash-top h1 {
   color: #e6bbfe;
   text-align: center;
 }
-.splash-top h2{
+
+.splash-top h2 {
   color: #e2acff;
   text-align: center;
   padding-left: 3em;
   padding-right: 3em;
   font-weight: 100;
 }
+
 .splash {
   width: 100%;
 }
-.splash-after{
+
+.splash-after {
   background: #2d0742;
   text-align: center;
   color: white;
@@ -528,37 +561,38 @@ img.user_tool_profileimg:hover{
   gets rid of 1px pink line at the intersection of splash-wrapper 
   behind the svg and this background color
   */
-  transform: translateY(-2px); 
+  transform: translateY(-2px);
 
-  padding-top: 3em;
-  padding-bottom: 3em;
-  padding-left: 3em;
-  padding-right: 3em;
+  padding-top: 7em;
+  padding-left: 11em;
+  padding-right: 11em;
+  padding-bottom: 7em;
 }
 
-.splash-after p{
+.splash-after p {
   color: white;
 
 }
 
-.bigger_txt{
+.bigger_txt {
   font-weight: bold;
   display: inline-block;
   color: rgb(166, 11, 255);
 }
 
-.divider{
+.divider {
   height: 50vh;
   background: #621163;
   transform: translateY(-2px);
 }
+
 /*stecker part::*/
-.stecker{
+.stecker {
   width: 100%;
   background: #621163;
 }
 
-.stecker p{
+.stecker p {
   margin: 0;
 }
 
@@ -566,24 +600,212 @@ img.user_tool_profileimg:hover{
   transform: translateY(-3px);
 }
 
-.placeholder{
+.placeholder {
   height: 400px;
   width: 100%;
 }
 
 /*JS SCRIPTS:: url_controller.js changes:*/
-.querystring_firma{
+.querystring_firma {
   display: inline-block;
 }
 
-.querystring_firma::first-letter{
+.querystring_firma::first-letter {
   text-transform: uppercase;
 }
 
-.querystring_firma_warumich{
+.querystring_firma_warumich {
   color: white;
   text-align: center;
-  padding: 3em;
+  padding-top: 10em;
+  padding-left: 9em;
+  padding-right: 9em;
+  padding-bottom: 5em;
+
   background: #2d0742;
   transform: translateY(-3px);
+}
+
+.wave-divider {
+  background-color: #2d0742;
+  transform: translateY(-3px);
+  width: 100%;
+}
+
+.number-wrapper {
+  background: #1d042b;
+  position: relative;
+  z-index: 10;
+  transform: translateY(-2px);
+  text-align: center;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  box-shadow: 0px 5px #2c7865, 0px 10px #2a1a63, 0px 15px #410c25;
+}
+
+.number-counter {
+  display: inline-block;
+  text-align: center;
+  border-radius: 3%;
+
+  margin: 3em;
+
+}
+
+.number-counter p {
+  color: white;
+  display: inline-block;
+}
+
+.number-counter .querystring_firma {
+  color: white;
+  display: inline-block;
+}
+
+.number-counter h1 {
+  color: white;
+  margin: -0.2em;
+  font-size: 6.5em;
+}
+
+/*<---- TOOLS_wrapper*/
+
+.tools_wrapper {
+  background: #170421;
+  transform: translateY(-3px);
+}
+
+.headline {
+  text-align: center;
+  padding: 4em;
+}
+
+.headline h1 {
+  color: white;
+  font-weight: bold;
+}
+
+.headline h2 {
+  color: white;
+  font-weight: lighter;
+}
+
+.tools-nav {
+  padding: 3em;
+}
+
+.tools-nav button {
+  margin: 10px;
+  padding: 10px 20px;
+  border-radius: 40px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: #fff;
+  background-color: rgba(99, 99, 99, 0.25);
+  border: 1px solid rgba(203, 159, 254, 0.55);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.tools-nav .active {
+  background-color: rgba(132, 42, 233, 0.55);
+}
+
+.btn:hover {
+  color: white;
+  background: rgba(132, 42, 233, 1);
+}
+
+.items-grid {
+  display: grid;
+  margin: 0 auto;
+  grid-template-columns: repeat(7, 1.2fr);
+  grid-gap: 50px;
+}
+
+.gridscaler {
+  padding: 3em;
+}
+
+.gridicon {
+  position: relative;
+  padding-bottom: 100%;
+  width: 100%;
+  height: 0;
+  background-color: rgba(255, 255, 255, 0.125);
+  border-radius: 50%;
+  transition: all 0.1s ease;
+  cursor: pointer;
+}
+
+.gridicon-img {
+  margin: 1em;
+}
+
+.griditem{
+  display: none; /*gets turned on individually based on active nav tab*/
+}
+.griditem p {
+  margin-top: 10px;
+  color: white;
+}
+
+.gridicon:hover {
+  padding-bottom: 102%;
+  width: 102%;
+  border: 1px solid rgba(132, 42, 233, 1);
+}
+
+.active-gridicon {
+  background: #ffffff;
+}
+
+.message-panel {
+  /*width: calc(50% - 80px);*/
+  text-align: center;
+}
+
+.msg-container {
+  position: sticky;
+  z-index: 10;
+  bottom: 0;
+  background-color: #fff;
+  border-radius: 10px;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  padding-left: 6em;
+  padding-right: 6em;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.activemsg {
+  opacity: 1;
+  /*transitions to this when class is added in skills.js*/
+}
+
+.msg-btn {
+  position: absolute;
+  padding: 5px 18px;
+  margin-left: 1em;
+  left: 0;
+  top: 0;
+  border-radius: 40px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: #fff;
+  background-color: rgba(203, 159, 254, 1);
+  border: 1px solid rgba(203, 159, 254, 0.55);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.msg-btn:hover {
+  background-color: rgba(132, 42, 233, 1);
+}
+
+._show{
+  display: block;
 }

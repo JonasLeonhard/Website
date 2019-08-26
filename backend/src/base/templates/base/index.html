@@ -42,7 +42,26 @@
             und wenn etwas nicht direkt funktioniert,
             weckt dies besonders meinen Ehrgeiz, Prozesse und Tools genau zu verstehen.
         </p>
+    </div>
+    <div class="number-wrapper">
+        <div class="number-counter">
+            <h1 class="nmbr1">1462</h1>
+            <p class="nmbr1-p">Stunden im Studium der Medieninformatik</p>
+        </div>
 
+        <div class="number-counter ">
+            <h1 class="nmbr2">1337</h1>
+            <p class="nmbr2-p">Stunden an eigenen Projekten der Informatik</p>
+        </div>
+
+        <div class="number-counter">
+            <h1 class="nmbr3">0</h1>
+            <p class="nmbr3-p">Tage an Arbeit
+                bei&nbsp;<div class="querystring_firma nmbr3firma">Firma</div>
+            </p>
+        </div>
+    </div>
+    <div class="splash-after">
         <p>
             <span class="bigger_txt">
                 Auch neben dem Studium
@@ -491,6 +510,138 @@
 </p>
 </div> <!-- END STECKER-------------------------------------------------------->
 
+<!--divider wave:-->
+<img class="wave-divider" src="{% static 'base/wave_dark.svg' %}" alt="wave:divider">
+
+<div class="tools_wrapper">
+
+    <div class="headline">
+        <h1>Meine Fähigkeiten</h1>
+        <h2>hier findest du meine <span class="bigger_txt">Skills</span></h2>
+    </div>
+
+    <nav class="tools-nav">
+        <button class="btn _1 active">Programmieren</button>
+        <button class="btn _2">Tools</button>
+        <button class="btn _3">Soft Skills</button>
+        <button class="btn _4">Sprachen</button>
+
+    </nav>
+    <!--sticky message at the top, active when clicking gridicon- activated in skills.js-->
+
+
+
+
+    <div class="gridscaler">
+        <div class="items-grid">
+            <!-- _programming ------------------------------------>
+            <div class="griditem _programming _show">
+                <div class="gridicon gridicon">
+                    <img class="gridicon-img" src="{% static 'base/cogwheel.svg' %}">
+                </div>
+                <p class="gridkey">Javascript</p>
+            </div>
+
+            <div class="griditem _programming _show">
+                <div class="gridicon gridicon">
+                    <img class="gridicon-img" src="{% static 'base/cogwheel.svg' %}">
+                </div>
+                <p class="gridkey">Java</p>
+            </div>
+
+            <div class="griditem _programming _show">
+                <div class="gridicon gridicon">
+                    <img class="gridicon-img" src="{% static 'base/cogwheel.svg' %}">
+                </div>
+                <p class="gridkey">Python</p>
+            </div>
+
+            <div class="griditem _programming _show">
+                <div class="gridicon gridicon">
+                    <img class="gridicon-img" src="{% static 'base/cogwheel.svg' %}">
+                </div>
+                <p class="gridkey">Html</p>
+            </div>
+
+            <div class="griditem _programming _show">
+                <div class="gridicon gridicon">
+                    <img class="gridicon-img" src="{% static 'base/cogwheel.svg' %}">
+                </div>
+                <p class="gridkey">Css</p>
+            </div>
+    
+            <!-- _tools ------------------------------------>
+            <div class="griditem _tools">
+                <div class="gridicon">
+                    <img class="gridicon-img" src="{% static 'base/cogwheel.svg' %}">
+                </div>
+                <p class="gridkey">Photoshop</p>
+            </div>
+
+            <div class="griditem _tools">
+                <div class="gridicon">
+                    <img class="gridicon-img" src="{% static 'base/cogwheel.svg' %}">
+                </div>
+                <p class="gridkey">Unity</p>
+            </div>
+
+            <div class="griditem _tools">
+                <div class="gridicon">
+                    <img class="gridicon-img" src="{% static 'base/cogwheel.svg' %}">
+                </div>
+                <p class="gridkey">Blender</p>
+            </div>
+            <!-- _skills ------------------------------------>
+            <div class="griditem _skills">
+                <div class="gridicon">
+                    <img class="gridicon-img" src="{% static 'base/cogwheel.svg' %}">
+                </div>
+                <p class="gridkey">Freundlich</p>
+            </div>
+
+            <div class="griditem _skills">
+                <div class="gridicon">
+                    <img class="gridicon-img" src="{% static 'base/cogwheel.svg' %}">
+                </div>
+                <p class="gridkey">Teamworker</p>
+            </div>
+            <!-- _language ------------------------------------>
+            <div class="griditem _language">
+                <div class="gridicon">
+                    <img class="gridicon-img" src="{% static 'base/cogwheel.svg' %}">
+                </div>
+                <p class="gridkey">Deutsch</p>
+            </div>
+
+            <div class="griditem _language">
+                <div class="gridicon">
+                    <img class="gridicon-img" src="{% static 'base/cogwheel.svg' %}">
+                </div>
+                <p class="gridkey">Englisch</p>
+            </div>
+
+            <div class="griditem _language">
+                <div class="gridicon">
+                    <img class="gridicon-img" src="{% static 'base/cogwheel.svg' %}">
+                </div>
+                <p class="gridkey">Dänisch</p>
+            </div>
+
+            
+            
+        </div><!-- end items-grid-->   
+        <div class="msg-container">
+        <button class="msg-btn">Ok</button>
+            <div class="message-panel">
+                this is a message-panel, the message of this panel gets loaded in base/skills.js 
+            </div>
+            
+        </div>
+    </div> <!-- end gridscaler-->
+</div>
+
+
+
 <!-- placeholder class with default text for ''warumich' gets replaced when get -> ?job=inovex  .. or other -> to change url_controller.js!-->
 <div class="divider"></div>
 
@@ -506,5 +657,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/animation.gsap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
 <script src="{% static 'base/animation.js' %}"></script>
+<script src="{% static 'base/skills.js' %}"></script>
 <script src="{% static 'base/url_controller.js' %}"></script>
 {% endblock script %}
