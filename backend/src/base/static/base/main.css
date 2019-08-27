@@ -553,7 +553,7 @@ img.user_tool_profileimg:hover {
 }
 
 .splash-after {
-  background: #2d0742;
+  background: #1d042b;
   text-align: center;
   color: white;
 
@@ -714,8 +714,8 @@ img.user_tool_profileimg:hover {
   z-index: 10;
   transform: translateY(-3px);
   text-align: center;
-  border-bottom: 1px solid white;
-  box-shadow: 0px 5px #2c7865, 0px 10px #2a1a63, 0px 15px #410c25;
+  /*border-bottom: 1px solid white;*/
+  box-shadow: 0px 20px #170322bf, 0px 50px #1703227c, 0px 91px #17032242;
 }
 
 .number-counter {
