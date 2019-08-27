@@ -566,12 +566,83 @@ img.user_tool_profileimg:hover {
   padding-top: 7em;
   padding-left: 11em;
   padding-right: 11em;
-  padding-bottom: 7em;
+  padding-bottom: 2em;
+}
+.splash-after_1 h1{
+  color: white;
+  text-align: right;
+  border-bottom: 1px solid white;
+}
+.splash-after-wrapper{
+  display: flex;
+  padding: 3em;
+  background: #2d0742;
+  transform: translateY(-2px);
+}
+.splash-after p {
+  color: white
+}
+.splash-after h1{
+  color: white;
+  text-align: right;
+  border-bottom: 1px solid white;
+}
+.splash-after-git{
+  display: inline-block;
+  position: relative;
+  background: #1d042b;
+
+  margin-top: 3em;
+  width: 10em;
+  box-sizing: border-box;
+  border-radius: 50%;
+  
+  transition: all 0.3s ease-in-out;
+  animation: blink 3s infinite linear;
+  animation-direction: alternate-reverse;
+  
 }
 
-.splash-after p {
+@keyframes blink {
+  0% {transform: rotateY(0deg);}
+  5% {transform: rotateY(0deg); transform: translateY(-20px);}
+  10% {transform: rotateY(0deg); transform: translateY(0px);}
+  80% {transform: rotateY(0deg);}
+  90% {transform: rotateY(180deg);}
+  100%{transform: rotateY(360deg);}
+}
+
+.splash-after_1 {
+  background: #2d0742;
+  text-align: center;
   color: white;
 
+  /*
+  gets rid of 1px pink line at the intersection of splash-wrapper 
+  behind the svg and this background color
+  */
+  transform: translateY(-2px);
+
+  padding-top: 3em;
+  padding-left: 2em;
+  padding-right: 11em;
+  padding-bottom: 2em;
+}
+.splash-after p {
+  color: white
+}
+
+.splash-after-svgtop{
+  background: #2d0742;
+  transform: translateY(-2px);
+  margin-top: 4em;
+}
+.svgbot-2{
+  padding-right: 2em;
+  margin-top: -2em;
+}
+.splash-after-git:hover{
+  background: white;
 }
 
 .bigger_txt {
@@ -617,13 +688,18 @@ img.user_tool_profileimg:hover {
 .querystring_firma_warumich {
   color: white;
   text-align: center;
-  padding-top: 10em;
-  padding-left: 9em;
-  padding-right: 9em;
+  padding-top: 4em;
+  padding-left: 2em;
+  padding-right: 2em;
   padding-bottom: 5em;
 
   background: #2d0742;
   transform: translateY(-3px);
+}
+.querystring_firma_warumich h1{
+  color: white;
+  text-align: right;
+  border-bottom: 1px solid white;
 }
 
 .wave-divider {
@@ -636,9 +712,8 @@ img.user_tool_profileimg:hover {
   background: #1d042b;
   position: relative;
   z-index: 10;
-  transform: translateY(-2px);
+  transform: translateY(-3px);
   text-align: center;
-  border-top: 1px solid white;
   border-bottom: 1px solid white;
   box-shadow: 0px 5px #2c7865, 0px 10px #2a1a63, 0px 15px #410c25;
 }
@@ -738,14 +813,19 @@ img.user_tool_profileimg:hover {
   transition: all 0.1s ease;
   cursor: pointer;
 }
-
 .gridicon-img {
   margin: 1em;
 }
 
 .griditem{
+  text-align: center;
   display: none; /*gets turned on individually based on active nav tab*/
+  transform: scale(1);
+  max-width: 100%;
+  width: 100%;
+  min-width: 100%;
 }
+
 .griditem p {
   margin-top: 10px;
   color: white;
@@ -753,7 +833,7 @@ img.user_tool_profileimg:hover {
 
 .gridicon:hover {
   padding-bottom: 102%;
-  width: 102%;
+  transform: scale(1.1);
   border: 1px solid rgba(132, 42, 233, 1);
 }
 
@@ -806,6 +886,49 @@ img.user_tool_profileimg:hover {
   background-color: rgba(132, 42, 233, 1);
 }
 
-._show{
+._show{ /**/
   display: block;
+}
+
+svg#Artboard_1_1_{
+  width: 50em;
+  transition: all 0.2s linear;
+}
+g#Rectangle_1{
+  animation: type 3s infinite linear;
+}
+
+@keyframes type {
+  0% {opacity: 1;}
+  49% {opacity: 1;}
+  50%{opacity: 0;}
+  99%{opacity: 0;}
+  100%{opacity: 1;}
+}
+
+g#highlight_screen{
+  animation: reflect 20s infinite linear;
+}
+g#Screen{
+  animation: reflect2 20s infinite linear;
+}
+
+@keyframes reflect {
+  0% {opacity: 0.102;}
+  97% {opacity: 0.102;}
+  98%{opacity: 0.11;}
+  100%{opacity: 0.102;}
+}
+@keyframes reflect2 {
+  0% {opacity: 1;}
+  94% {opacity: 1;}
+  96%{opacity: 0;}
+  100%{opacity: 1;}
+}
+
+/*-------------QUERIES::*/
+@media only screen and (max-width: 1150px) {
+  body {
+    background-color: lightblue;
+  }
 }
